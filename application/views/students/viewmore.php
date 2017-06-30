@@ -350,7 +350,8 @@
         <div class="col-lg-6">
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Student List</h3>
+                    <h3 class="panel-title">Student Info</h3>
+                         <div class="pull-right"> <a href="<?php echo base_url();?>index.php/Student/viewList"><button class="btn btn-primary btn-circle" type="button"><i class="fa fa-home"></i></button></a></div>
                 </div><!-- 
                 block///// -->
                 <div class="panel-body">
@@ -389,6 +390,7 @@
                     <td align="center"><a href="<?php echo base_url();?>index.php/Student/deleteData/<?php echo $student->id; ?>"><button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i> <span class="bold">Delete</span></button></a></td></tr>
                     </tbody>
                 </table>
+                <a href="<?php echo base_url();?>index.php/Student/viewList"><button class="btn btn-success btn-circle" type="button"><i class="fa fa-arrow-circle-left"></i></button></a>
     </div>
 
             </div>

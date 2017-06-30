@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <!-- Page title -->
-    <title>HOME-Dashboard</title>
+    <title>One-Student List</title>
 
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!--<link rel="shortcut icon" type="image/ico" href="favicon.ico" />-->
@@ -30,7 +30,7 @@
 <div id="header">
     <div id="logo" class="light-version">
         <span style="font-weight:bold;">
-            SPEC ADMIN
+            ONE ADMIN
         </span>
     </div>
     <nav role="navigation">
@@ -41,7 +41,7 @@
                 </li>
         </div>
         <div class="small-logo">
-            <span class="text-primary">SPEC ADMIN</span>
+            <span class="text-primary">ONE ADMIN</span>
         </div>
         <div class="mobile-menu">
             <button type="button" class="navbar-toggle mobile-menu-toggle" data-toggle="collapse" data-target="#mobile-collapse">
@@ -351,6 +351,7 @@
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">Student List</h3>
+                    <div class="pull-right"> <a href="<?php echo base_url();?>index.php/Student/viewList"><button class="btn btn-primary btn-circle" type="button"><i class="fa fa-home"></i></button></a></div>
                 </div>
                 <!--Block Styled Form -->
                 <!--===================================================-->

@@ -350,7 +350,8 @@
         <div class="col-lg-6">
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">New Entry</h3>
+                    <h3 class="panel-title">Edit Entry</h3>
+                         <div class="pull-right"> <a href="<?php echo base_url();?>index.php/Student/viewList"><button class="btn btn-primary btn-circle" type="button"><i class="fa fa-home"></i></button></a></div>
                 </div>
                 <!--Block Styled Form -->
                 <!--===================================================-->
