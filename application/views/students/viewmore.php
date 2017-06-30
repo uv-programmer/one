@@ -350,53 +350,49 @@
         <div class="col-lg-6">
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">New Entry</h3>
-                </div>
-                <!--Block Styled Form -->
-                <!--===================================================-->
+                    <h3 class="panel-title">Student List</h3>
+                </div><!-- 
+                block///// -->
+                <div class="panel-body">
+                <div class="table-responsive">
+                <table class="table table-bordered table-striped" cellspacing="1" cellpadding="1">
+                    <thead>
+                    <tr>
+                        <th>Particular</th>
+                        <th>Details</th>
+                       
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>First Name</th>
+                        <td><?php echo $student->first_name; ?></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Last Name</th>
+                        <td><?php echo $student->last_name; ?></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Standard</th>
+                        <td><?php echo $student->standard; ?></td>
+                        
+                    </tr>
+                    <tr>
+                        <th>Mobile</th>
+                        <td><?php echo $student->mobile; ?></td>
+                       
+                    </tr>
+                   <tr>
+                       <td align="center">  <a href="<?php echo base_url();?>index.php/Student/editData/<?php echo $student->id; ?>"><button class="btn btn-info " type="button"><i class="fa fa-paste"></i> Edit</button></td>
+                    <td align="center"><a href="<?php echo base_url();?>index.php/Student/deleteData/<?php echo $student->id; ?>"><button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i> <span class="bold">Delete</span></button></a></td></tr>
+                    </tbody>
+                </table>
+    </div>
 
-
-                <form action="<?php echo base_url();?>index.php/Student/addData" method="post">
-
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Firstname</label> <input class="form-control" type="text" name="first_name">
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Lastname</label> <input class="form-control" type="text" name="last_name">
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">standard</label> <input class="form-control" type="text" name="standard">
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Mobile</label> <input class="form-control" type="text" name="mobile">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="panel-footer text-right">
-                        <button class="btn btn-success" type="submit">Submit</button>
-                    </div>
-                </form>
-                <!--===================================================-->
+            </div>
+             <!--===================================================-->
                 <!--End Block Styled Form -->
             </div>
         </div>

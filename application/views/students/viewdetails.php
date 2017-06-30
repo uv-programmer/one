@@ -350,52 +350,41 @@
         <div class="col-lg-6">
             <div class="panel">
                 <div class="panel-heading">
-                    <h3 class="panel-title">New Entry</h3>
+                    <h3 class="panel-title">Student List</h3>
                 </div>
                 <!--Block Styled Form -->
                 <!--===================================================-->
 
 
-                <form action="<?php echo base_url();?>index.php/Student/addData" method="post">
-
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Firstname</label> <input class="form-control" type="text" name="first_name">
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Lastname</label> <input class="form-control" type="text" name="last_name">
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">standard</label> <input class="form-control" type="text" name="standard">
-                                </div>
-                            </div>
-
-
-                            <div class="col-sm-6">
-                                <div class="form-group">
-                                    <label class="control-label">Mobile</label> <input class="form-control" type="text" name="mobile">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="panel-footer text-right">
-                        <button class="btn btn-success" type="submit">Submit</button>
-                    </div>
-                </form>
+               
+                  <div class="table-responsive">
+                <table cellpadding="1" cellspacing="1" class="table">
+                    <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                       
+                    </tr>
+                    </thead>
+                    <tbody>
+                            <?php foreach($student as $stud):?>
+                    <tr>
+                        <td><?php echo $stud->first_name; ?></td>
+                        <td><?php echo $stud->last_name; ?></td>
+                       
+                         <td><a href="<?php echo base_url();?>index.php/Student/viewMore/<?php echo $stud->id; ?>"><button type="button" class="btn w-xs btn-primary2"><i class="fa fa-table"> View</i></button></a></td>
+                       
+                        <td><a href="<?php echo base_url();?>index.php/Student/editData/<?php echo $stud->id; ?>"><button class="btn btn-info " type="button"><i class="fa fa-paste"></i> Edit</button></td>
+                       
+                        <td><a href="<?php echo base_url();?>index.php/Student/deleteData/<?php echo $stud->id; ?>"><button class="btn btn-danger" type="button"><i class="fa fa-trash-o"></i> <span class="bold">Delete</span></button></a></td>
+                       
+                       
+                     
+                    </tr>
+                    <?php endforeach;?>  
+                    </tbody>
+                </table>
+            </div>
                 <!--===================================================-->
                 <!--End Block Styled Form -->
             </div>

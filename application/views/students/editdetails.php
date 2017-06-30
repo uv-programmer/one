@@ -356,20 +356,20 @@
                 <!--===================================================-->
 
 
-                <form action="<?php echo base_url();?>index.php/Student/addData" method="post">
+                <form action="<?php echo base_url();?>index.php/Student/updateData/<?php echo $student->first_name; ?>" method="post">
 
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="control-label">Firstname</label> <input class="form-control" type="text" name="first_name">
+                                    <label class="control-label">Firstname</label> <input class="form-control" type="text" value="<?php echo $student->first_name; ?>" name="first_name">
                                 </div>
                             </div>
 
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="control-label">Lastname</label> <input class="form-control" type="text" name="last_name">
+                                    <label class="control-label">Lastname</label> <input class="form-control" type="text" value="<?php echo $student->last_name; ?>" name="last_name">
                                 </div>
                             </div>
                         </div>
@@ -378,14 +378,14 @@
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="control-label">standard</label> <input class="form-control" type="text" name="standard">
+                                    <label class="control-label">standard</label> <input class="form-control" type="text" value="<?php echo $student->standard; ?>" name="standard">
                                 </div>
                             </div>
 
 
                             <div class="col-sm-6">
                                 <div class="form-group">
-                                    <label class="control-label">Mobile</label> <input class="form-control" type="text" name="mobile">
+                                    <label class="control-label">Mobile</label> <input class="form-control" type="text" value="<?php echo $student->mobile; ?>" name="mobile">
                                 </div>
                             </div>
                         </div>
